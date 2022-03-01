@@ -1,0 +1,54 @@
+package main
+
+import "fmt"
+
+func main() {
+	//long method of creating variable
+	//var card string = "Ace of Spades"
+
+	card := "Ace of Spades"
+	//reassigning the value of card
+	//card = "Five of Diamonds"
+
+	fmt.Println(card)
+}
+
+Declaring a different function 
+func newCard() string {
+	return "Five of Diamonds"
+}
+
+****************************************
+
+package main
+
+import "fmt"
+
+func main() {
+	//making multiple cards at a time using slice
+	cards := []string{newCard(), "Ace of Diamonds"}
+	cards = append(cards, "six of spades")
+
+	//iterating over the slice of cards 
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+
+}
+
+func newCard() string {
+	return "Five of Diamonds"
+}
+
+
+*************Dealing cards main function ********
+cards := neweDeck()
+
+	hand, remainginCards := deal(cards, 5)
+	hand.print()
+	remainginCards.print()
+
+*********************
+byte slice as string 
+greeting := " Hi There"
+	fmt.Println([]byte(greeting))
